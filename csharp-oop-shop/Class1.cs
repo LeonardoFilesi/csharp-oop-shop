@@ -9,14 +9,14 @@ namespace csharp_oop_shop
     public class Prodotto
     {
         // ATTRIBUTI:
-        private int Codice;
+        private int Codice { get; private set; }
         private string Nome { get; set; }
         private string Descrizione { get; set; }
         private decimal Prezzo { get; set; }
         private decimal Iva { get; set; }
 
         // COSTRUTTORE
-        public Prodotto( string nome, string descrizione, decimal prezzo, decimal iva)
+        public Prodotto(string nome, string descrizione, decimal prezzo, decimal iva)
         {
             this.Codice = new Random().Next(0001, 9999);
             this.Nome = nome;
@@ -40,8 +40,8 @@ namespace csharp_oop_shop
             get { return Descrizione; }
         }
         public decimal prezzo
-        { 
-            get { return Prezzo; } 
+        {
+            get { return Prezzo; }
         }
         public decimal prezzoConIva
         {
@@ -49,7 +49,10 @@ namespace csharp_oop_shop
         }
         public decimal iva
         {
-            get { return (prezzo / 100 * Iva);
+            get
+            {
+                return (prezzo / 100 * Iva);
+            }
         }
     }
 }

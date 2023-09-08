@@ -6,7 +6,7 @@ internal class Program
         {
             Prodotto actionFigure = new Prodotto("action figure", "Stormtrooper", 143, 22);
 
-            Console.WriteLine($"La nuovissima {actionFigure.nome} rappresenta uno {actionFigure.descritione} nella sua tipica posa. Il prezzo è {actionFigure.prezzoConIva}$ di cui iva {actionFigure.iva}");
+            Console.WriteLine($"La nuovissima {actionFigure.nome} rappresenta uno {actionFigure.descrizione} nella sua tipica posa. Il prezzo è {actionFigure.prezzoConIva}$ di cui iva {actionFigure.iva}");
         }
     }
 }
