@@ -8,8 +8,8 @@ namespace csharp_oop_shop
 {
     public class Prodotto
     {
-        // ATTRIBUTI:
-        private int Codice { get; set; }
+        // PROPRIETA':
+        public int Codice { get; set; } = new Random().Next(0001, 9999);
         private string Nome { get; set; }
         private string Descrizione { get; set; }
         private decimal Prezzo { get; set; }
@@ -18,7 +18,6 @@ namespace csharp_oop_shop
         // COSTRUTTORE
         public Prodotto(string codice, string nome, string descrizione, decimal prezzo, decimal iva)
         {
-            this.Codice = new Random().Next(0001, 9999);
             this.Nome = nome;
             this.Descrizione = descrizione;
             this.Prezzo = prezzo;
